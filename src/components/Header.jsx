@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineHeart,
   AiOutlineUser,
@@ -13,7 +13,19 @@ import SearchSuggestion from "./SearchSuggestion";
 const Header = ({ showSubHeader }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
-  console.log(searchTerm, showSuggestions);
+
+  useEffect(() => {
+    if (showSuggestions) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [showSuggestions]);
+
   return (
     <div className="relative">
       <header className="bg-white border-b border-themeMidGray">
