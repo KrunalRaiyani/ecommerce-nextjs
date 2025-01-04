@@ -10,6 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        themeBlack: "#3C4242",
+        themeGray: "#807D7E",
+        themeMidGray: "#dbd7d8",
+        themeSubGray: "#F6F6F6",
+        themeMain: "#8A33FD",
       },
     },
   },
