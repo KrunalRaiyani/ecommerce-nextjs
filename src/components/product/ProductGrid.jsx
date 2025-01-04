@@ -2,11 +2,15 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import TitleHead from "../TitleHead";
 
-const ProductGrid = ({ title, data }) => {
+const ProductGrid = ({ title, data, className, renderContent }) => {
   return (
-    <div>
-      {title && <TitleHead title={title} />}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="w-full">
+      <div className="flex justify-between items-center mb-10">
+        {title && <TitleHead title={title} />}
+        {renderContent}
+      </div>
+      <div
+        className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ${className}`}>
         {data?.map((item) => (
           <ProductCard
             key={item?.title}

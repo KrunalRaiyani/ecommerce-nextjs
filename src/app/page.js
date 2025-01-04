@@ -1,6 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import CategorySlider from "@/components/home/CategorySlider";
 import HeroSlider from "@/components/home/HeroSlider";
 import OfferCard from "@/components/home/OfferCard";
@@ -14,7 +12,6 @@ import { dresesData, kurtasData } from "@/utils/data";
 export default function Home() {
   return (
     <div>
-      <Header />
       <HeroSlider />
 
       <Wrapper>
@@ -44,11 +41,12 @@ export default function Home() {
           <ServicesSection />
         </div> */}
         <div className="my-14">
-          <TitleHead title={"Feedback"} />
+          <div className="mb-10">
+            <TitleHead title={"Feedback"} />
+          </div>
           <ReviewSection />
         </div>
       </Wrapper>
-      <Footer />
     </div>
   );
 }

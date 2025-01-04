@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-themeBlack">
-      <div className="max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24">
+      <div className="max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-20">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex justify-center text-white sm:justify-start text-3xl font-bold">
@@ -138,14 +138,8 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="flex group justify-center sm:justify-start gap-1.5">
-                      <span className="text-white transition group-hover:text-white/75">
-                        Live Chat
-                      </span>
-                      <span className="relative flex w-2 h-2 -mr-2">
-                        <span className="absolute inline-flex w-full h-full bg-teal-400 rounded-full opacity-75 animate-ping" />
-                        <span className="relative inline-flex w-2 h-2 bg-themeMain rounded-full" />
-                      </span>
+                      className="text-white transition hover:text-white/75">
+                      Live Chat
                     </Link>
                   </li>
                 </ul>
@@ -184,26 +178,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="pt-6 mt-12 border-t border-gray-800">
-          <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-sm text-themeSubGray">
-              <span className="block sm:inline">All rights reserved.</span>
-              <Link
-                href="/"
-                className="inline-block text-themeMain underline transition hover:text-themeSubGray">
-                Terms &amp; Conditions
-              </Link>
-              <span>·</span>
-              <Link
-                href="/"
-                className="inline-block text-themeMain underline transition hover:text-themeSubGray">
-                Privacy Policy
-              </Link>
-            </p>
-            <p className="mt-4 text-sm text-themeSubGray sm:order-first sm:mt-0">
-              © 2022 Company Name
-            </p>
-          </div>
+        <div className="pt-6 mt-12 border-t border-themeGray">
+          <p className="mt-4 text-sm text-center text-themeSubGray sm:order-first sm:mt-0">
+            © 2022 Company Name All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

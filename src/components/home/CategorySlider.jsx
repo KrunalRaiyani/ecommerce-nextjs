@@ -52,7 +52,9 @@ const CategorySlider = () => {
 
   return (
     <div>
-      <TitleHead title={"Categories"} />
+      <div className="mb-10">
+        <TitleHead title={"Categories"} />
+      </div>
       <Swiper
         className="mySwiper overflow-hidden sm:h-full"
         navigation={true}
