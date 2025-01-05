@@ -15,6 +15,7 @@ export default {
         themeMidGray: "#dbd7d8",
         themeSubGray: "#F6F6F6",
         themeMain: "#8A33FD",
+        errorCol: "red",
       },
     },
   },

@@ -1,4 +1,5 @@
 "use client";
+import LoginModal from "@/components/auth/LoginModal";
 import CategorySlider from "@/components/home/CategorySlider";
 import HeroSlider from "@/components/home/HeroSlider";
 import OfferCard from "@/components/home/OfferCard";
@@ -13,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <HeroSlider />
-
       <Wrapper>
         <div className="my-14">
           <CategorySlider />
