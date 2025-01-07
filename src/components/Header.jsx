@@ -10,8 +10,13 @@ import Search from "./Search";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { openLoginModal } from "@/Redux/slice/modals/login-popup";
+import { usePathname } from "next/navigation";
 
 const Header = ({ showSubHeader }) => {
+  const path = usePathname();
+
+  const isCart = path === "/cart";
+
   const dispatch = useDispatch();
 
   const handleLoginPopup = () => {
@@ -26,11 +31,11 @@ const Header = ({ showSubHeader }) => {
             <Link href="/">Euphoria</Link>
           </div>
 
-          {/* Search Component */}
           <Search />
 
           <div className="flex items-center space-x-4">
-            <button className="p-2 rounded-lg bg-themeSubGray text-themeGray hover:bg-themeMain hover:text-white transition-colors duration-200 ease-in-out">
+            <button
+              className={`p-2 rounded-lg bg-themeSubGray text-themeGray hover:bg-themeMain hover:text-white transition-colors duration-200 ease-in-out`}>
               <AiOutlineHeart size={20} />
             </button>
             <button
@@ -38,9 +43,13 @@ const Header = ({ showSubHeader }) => {
               onClick={handleLoginPopup}>
               <AiOutlineUser size={20} />
             </button>
-            <button className="p-2 rounded-lg bg-themeSubGray text-themeGray hover:bg-themeMain hover:text-white transition-colors duration-200 ease-in-out">
+            <Link
+              href={"/cart"}
+              className={`p-2 rounded-lg bg-themeSubGray text-themeGray hover:bg-themeMain hover:text-white transition-colors duration-200 ease-in-out ${
+                isCart ? "!bg-themeMain text-white" : ""
+              }`}>
               <AiOutlineShoppingCart size={20} />
-            </button>
+            </Link>
           </div>
         </Wrapper>
       </header>

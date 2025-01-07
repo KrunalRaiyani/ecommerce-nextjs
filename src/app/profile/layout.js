@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Wrapper from "@/components/Wrapper";
 import { Providers } from "@/components/Providers";
+import ProfileSidebar from "@/components/profile/ProfileSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +26,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <Header showSubHeader={true} />
-          {children}
+          <Header />
+          <Wrapper className="flex gap-10 my-6">
+            <ProfileSidebar />
+            <div className="w-full">{children}</div>
+          </Wrapper>
           <Footer />
         </Providers>
       </body>
