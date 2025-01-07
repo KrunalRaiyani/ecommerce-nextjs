@@ -49,7 +49,7 @@ export default function ProfileSidebar() {
               className={`flex items-center gap-3 px-6 py-2.5 font-semibold rounded-r-lg text-themeGray hover:text-themeBlack hover:bg-themeSubGray border-l-2 border-transparent hover:border-themeBlack transition-all duration-300 ease-in-out
               ${
                 path.includes(tab.href)
-                  ? "text-themeBlack border-themeBlack bg-themeSubGray"
+                  ? "!text-themeBlack !border-themeBlack !bg-themeSubGray"
                   : ""
               }
               `}>
