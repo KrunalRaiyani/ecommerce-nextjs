@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { ImSpinner2 } from "react-icons/im";
+import { ImSpinner3 } from "react-icons/im";
 
 const Button = forwardRef((props, ref) => {
   const {
@@ -44,12 +44,9 @@ const Button = forwardRef((props, ref) => {
       data-variant={variant}
       ref={ref}
       className={rootClassName}
-      disabled={disabled}
+      disabled={disabled || loading}
       {...rest}>
-      {children}
-      {loading && (
-        <ImSpinner2 className="animate-spin ltr:-mr-1 rtl:-ml-1 ltr:ml-3 rtl:mr-3" />
-      )}
+      {loading ? <ImSpinner3 className="animate-spin text-2xl" /> : children}
     </button>
   );
 });
